@@ -58,8 +58,14 @@ let intervalo = setInterval(function() {
     console.log("Intervalo detenido después de 5 repeticiones");
   }
   //Borrar disparos
-  BorrarElemento(x + 200, y + 250, 150, 100);
+  x= 5
+  dibujarPrimeraPuerta();
 
+  x=500
+  dibujarPrimeraPuerta();
+
+  x=1000
+  dibujarPrimeraPuerta();
 }, 2000);
 }
 

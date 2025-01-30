@@ -20,6 +20,8 @@ var coordX1 = 50; // Posicion X del personaje en puerta 1
 var coordX2 = 550;// Posicion X del personaje en puerta 2
 var coordX3 = 1050;// Posicion X del personaje en puerta 3
 
+var puntuacion = 0;
+
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -30,11 +32,9 @@ function dibujarPrimeraPuerta() {
 }
 
 // Función para dibujar otros elementos con tamaño ajustado
-function dibujarElemento(id, posX, posY, width, height, visible= true) {
+function dibujarElemento(id, posX, posY, width, height) {
     var img = document.getElementById(id);
     ctx.drawImage(img, posX, posY, width, height);
-    if (!visible) ctx.globalAlpha = 0;
-    else ctx.globalAlpha = 1;
 }
 
 // function BorrarElemento(id, posX, posY, width, height) {
@@ -43,8 +43,8 @@ function dibujarElemento(id, posX, posY, width, height, visible= true) {
 
 // // Dibuja los elementos detrás de la primera puerta
 // dibujarElemento('Puerta Abierta', x, y, 500, 600);
-// dibujarElemento('Enemigo', x + 150, y + 200, 200, 150); 
-// dibujarElemento('Aliado', x + 200, y + 250, 150, 100); 
+// dibujarElemento('Enemigo', x + 150, y + 200, 200, 150);
+// dibujarElemento('Aliado', x + 200, y + 250, 150, 100);
 
 // // Dibuja la primera puerta al frente
 // dibujarPrimeraPuerta();
@@ -52,15 +52,15 @@ function dibujarElemento(id, posX, posY, width, height, visible= true) {
 // // Segunda puerta
 // x = 500;
 // dibujarElemento('Puerta Abierta', x, y, 500, 600);
-// dibujarElemento('Enemigo', x + 150, y + 200, 200, 150); 
-// dibujarElemento('Aliado', x + 200, y + 250, 150, 100); 
+// dibujarElemento('Enemigo', x + 150, y + 200, 200, 150);
+// dibujarElemento('Aliado', x + 200, y + 250, 150, 100);
 // var imgPuerta2 = document.getElementById('Puerta');
 // ctx.drawImage(imgPuerta2, x, y, 500, 600);
 
 // // Tercera puerta
 // x = 1000;
 // dibujarElemento('Puerta Abierta', x, y, 500, 600);
-// dibujarElemento('Enemigo', x + 150, y + 200, 200, 150); 
-// dibujarElemento('Aliado', x + 200, y + 250, 150, 100); 
+// dibujarElemento('Enemigo', x + 150, y + 200, 200, 150);
+// dibujarElemento('Aliado', x + 200, y + 250, 150, 100);
 // var imgPuerta3 = document.getElementById('Puerta');
 // ctx.drawImage(imgPuerta3, x, y, 500, 600);

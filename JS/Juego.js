@@ -29,7 +29,6 @@ document.addEventListener('keydown', function (event) {
     case "z": //Disparo puerta 1
       console.log('Tecla presionada: ', event.key);
       var Disparo = document.getElementById('Disparo');
-      Disparo.style.display = 'block';
       x = 10;
       dibujarElemento('Disparo', x + 200, y + 250, 150, 100);
 
@@ -51,7 +50,6 @@ document.addEventListener('keydown', function (event) {
       console.log('Tecla presionada: ', event.key);
       var Disparo = document.getElementById('Disparo');
       x = 500;
-      Disparo.style.display = 'block';
       dibujarElemento('Disparo', x + 200, y + 250, 150, 100);
 
       if (personaje2 === 1) { // hemos disparado a un aliado
@@ -70,7 +68,6 @@ document.addEventListener('keydown', function (event) {
       console.log('Tecla presionada: ', event.key);
       var Disparo = document.getElementById('Disparo');
       x = 1000;
-      Disparo.style.display = 'block';
       dibujarElemento('Disparo', x + 200, y + 250, 150, 100);
 
       if (personaje3 === 1) { // hemos disparado a un aliado
